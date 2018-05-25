@@ -6,7 +6,7 @@
 import pandas as pd
 
 # Read in data ----
-file_path = 'C:\\Users\\phato_000\\Documents\\ChaKProjects\\rw_project\\data\\winequality-red.csv'
+file_path = '..\\data\\winequality-red.csv'
 rw_data = pd.read_csv(file_path, sep=';')
 # Change column names
 rw_data.columns = rw_data.columns.str.replace(" ", "_")
@@ -100,5 +100,5 @@ rw_data['alcohol'] = rw_data['alcohol'].mask((rw_data['alcohol'] >= 11.5) & (rw_
 rw_data['alcohol'] = rw_data['alcohol'].mask(rw_data['alcohol'] >= 13.5, 3)
 
 # Write into csv for models ----
-file_path2='C:\\Users\\phato_000\\Documents\\ChaKProjects\\rw_project\\processed\\redwine.csv'
+file_path2='..\\processed\\redwine.csv'
 rw_data.to_csv(file_path2, index=False)
