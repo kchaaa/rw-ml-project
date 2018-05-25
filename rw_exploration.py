@@ -28,7 +28,7 @@ def plot_hist(data, alpha, title, xlabel, ylabel) :
    plt.show()
 
 # Read in data ----
-file_path = 'C:\\Users\\phato_000\\Documents\\ChaKProjects\\rw_project\\data\\winequality-red.csv'
+file_path = '..\\data\\winequality-red.csv'
 rw_data = pd.read_csv(file_path, sep=';')
 # Change column names
 rw_data.columns = rw_data.columns.str.replace(" ", "_")
